@@ -1,10 +1,12 @@
 {
+  "footer.css": "footer-0b75d79b92.css",
   "goods-list.css": "goods-list-3da1abccc5.css",
   "goods.css": "goods-b74b18901b.css",
-  "header.css": "header-ed01c34665.css",
+  "header.css": "header-49136befb8.css",
   "iconfont.css": "iconfont-2c13f24855.css",
-  "index.css": "index-ed01c34665.css",
+  "index.css": "index-194b9d04c1.css",
   "list.css": "list-3da1abccc5.css",
   "reset.css": "reset-c36cc67dd1.css",
-  "shopping-car.css": "shopping-car-3da1abccc5.css"
+  "shopping-car.css": "shopping-car-3da1abccc5.css",
+  "swiper.min.css": "swiper-d339c965d0.min.css"
 }
