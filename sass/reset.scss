@@ -2,6 +2,11 @@ body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,s
 h1,h2,h3,h4,h5,h6{
     font-weight: normal;
 }
+// @import 引入外部样式
+@import 'header.scss';
+@import 'iconfont.scss';
+@import 'swiper.min.scss';
+@import 'footer.scss';
 .center{
     margin: 0 auto;
 }

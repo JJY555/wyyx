@@ -104,7 +104,7 @@
   top: -17px;
 }
 //nav
-#yanxuan{
+.yanxuan{
   width: 1903px;
   height: 140px;
   position: relative;
@@ -239,44 +239,86 @@
       
     }
   }
-  .jjsh1{
-    background-color: #fff;
-    display: NONE;
-    padding: 14px 20px;
-    border: 1px solid #e5e5e5;
-    border-top: none;
-    ul{
-      
-      li{
-        float: left;
-        width: 124px;
-        margin-right: 24px;
-        .li-header{
-          height: 36px;
-          line-height: 36px;
-          border-bottom: 1px solid #e5e5e5;
-          margin-bottom: 10px;
-          font-size: 16px;
-          font-weight: bolder;
-        }
-        .li-body{
-          font-size: 14px;
-          margin-bottom: 4px;
-          line-height: 50px;
-          img{
-            width: 50px;
-            height: 50px;
-            margin-right: 4px;
-          }
-        }
-        .li-body:hover{
-          color: #CC9756;
+  
+  
+}
+.jjsh{
+  position: relative;
+}
+.jjsh1{
+  background-color: #fff;
+  display: NONE;
+  padding: 14px 20px;
+  border: 1px solid #e5e5e5;
+  border-top: none;
+  position: relative;
+  z-index: 100000;
+  ul{
+    
+    li{
+      float: left;
+      width: 124px;
+      margin-right: 24px;
+      .li-header{
+        height: 36px;
+        line-height: 36px;
+        border-bottom: 1px solid #e5e5e5;
+        margin-bottom: 10px;
+        font-size: 16px;
+        font-weight: bolder;
+      }
+      .li-body{
+        font-size: 14px;
+        margin-bottom: 4px;
+        line-height: 50px;
+        img{
+          width: 50px;
+          height: 50px;
+          margin-right: 4px;
         }
       }
-      li:nth-last-child(1){
-        margin-right: 0;
+      .li-body:hover{
+        color: #CC9756;
       }
     }
-    
+    li:nth-last-child(1){
+      margin-right: 0;
+    }
+  }
+  
+}
+//第二个头部的设置
+#header2{
+  width: 1902px;
+  background-color: #fff;
+  z-index: 50;
+  height: 0px;
+  border-top: 1px #dadce0 solid;
+  border-bottom: 1px solid #ececec;
+  position: fixed;
+  top: 0px;
+  transition: all 2s;
+  .inner{
+    height: 100%; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .img{
+      width: 126px;
+      height: 60%;
+      background: url(../img/icon.png) -0 -438px no-repeat;
+    }
+    a{
+      color: black;
+      font-weight: bold;
+      display: none;
+    }
+    a:hover{
+      color:#d0a161;
+    }
+    span{
+      color:#d0a161;
+      font-size: 14px;
+    }
   }
 }

@@ -1,10 +1,14 @@
 
 
 // @import 引入外部样式
-@import 'header.scss';
+@import 'reset.scss';
 //h4动态
 h2:hover,h4:hover{
     color: #e2c199;
+}
+#banner img{
+    width: 1903px;
+    height: 420px;
 }
 #new{
     height: 515px;
@@ -19,6 +23,8 @@ h2:hover,h4:hover{
         left: 272px;
         text-align: center;
         border-radius: 3px;
+        z-index: 15;
+        background-color: white;
         p{
             height: 37px;
             color: #bf4250;
@@ -64,6 +70,8 @@ h2:hover,h4:hover{
         right: 0;
         top: 25px;
         text-align: center;
+        z-index: 10;
+        background-color: #fff;
         .ma{
             width: 70px;
             height: 70px;
@@ -160,6 +168,9 @@ h2:hover,h4:hover{
         } 
          
     }
+    div:focus {
+        outline: none;
+        }
     .swiper-button-prev{
             position: absolute;
             left: 346px; 
@@ -167,6 +178,27 @@ h2:hover,h4:hover{
     .swiper-button-next{
         position: absolute;
         right: 346px;
+    }
+    .swiper-button-prev, .swiper-button-next {
+        height:25px!important;
+    }
+    .qiu{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #e2c199;
+        position: absolute;
+        right: 333px;
+        top: 236px;
+    }
+    .qiu1{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #e2c199;
+        position: absolute;
+        left: 333px;
+        top: 236px;
     }
 }
 //人气
@@ -481,4 +513,17 @@ h2:hover,h4:hover{
         }
         
     }
+}
+//fix固定标签设置
+#new{
+    h2{
+        position: relative;
+    }   
+}
+#fix-flag{
+    display: inline-block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: -100px;
 }

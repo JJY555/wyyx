@@ -83,31 +83,31 @@
   left: 30px;
   top: -17px; }
 
-#yanxuan {
+.yanxuan {
   width: 1903px;
   height: 140px;
   position: relative;
   background-color: #ffffff;
   box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2); }
-  #yanxuan .inner .top {
+  .yanxuan .inner .top {
     height: 109px;
     display: flex;
     justify-content: space-between;
     align-items: center; }
-    #yanxuan .inner .top .logo {
+    .yanxuan .inner .top .logo {
       width: 335px;
       height: 51px;
       background: url(../img/icon.png) no-repeat;
       background-position: -1px -303px;
       cursor: pointer; }
-    #yanxuan .inner .top .search {
+    .yanxuan .inner .top .search {
       position: relative;
       color: #c9c8c8;
       width: 533px; }
-      #yanxuan .inner .top .search a {
+      .yanxuan .inner .top .search a {
         color: #CC9756;
         margin: 0px 10px; }
-      #yanxuan .inner .top .search span {
+      .yanxuan .inner .top .search span {
         position: absolute;
         width: 14px;
         height: 14px;
@@ -115,7 +115,7 @@
         background-position: 0px -518px;
         top: 12px;
         left: 15px; }
-      #yanxuan .inner .top .search input[type=text] {
+      .yanxuan .inner .top .search input[type=text] {
         float: left;
         width: 441px;
         height: 38px;
@@ -126,9 +126,9 @@
         color: #c9c8c8;
         border-right: none;
         margin-bottom: 5px; }
-      #yanxuan .inner .top .search input[type=text]::placeholder {
+      .yanxuan .inner .top .search input[type=text]::placeholder {
         color: #c9c8c8; }
-      #yanxuan .inner .top .search input[type=button] {
+      .yanxuan .inner .top .search input[type=button] {
         float: left;
         width: 91px;
         height: 38px;
@@ -139,7 +139,7 @@
         font-size: 16px;
         cursor: pointer;
         margin-bottom: 5px; }
-    #yanxuan .inner .top .gwc {
+    .yanxuan .inner .top .gwc {
       position: relative;
       box-sizing: border-box;
       padding-left: 24px;
@@ -150,11 +150,11 @@
       font-size: 14px;
       margin-top: -17px;
       cursor: pointer; }
-      #yanxuan .inner .top .gwc span {
+      .yanxuan .inner .top .gwc span {
         line-height: 36px;
         margin-right: 7px;
         color: #CC9756; }
-      #yanxuan .inner .top .gwc .gwc-num {
+      .yanxuan .inner .top .gwc .gwc-num {
         display: inline-block;
         width: 19px;
         height: 19px;
@@ -166,59 +166,94 @@
         text-align: center;
         color: white;
         line-height: 19px; }
-    #yanxuan .inner .top .gwc:hover {
+    .yanxuan .inner .top .gwc:hover {
       background-color: rgba(46, 45, 45, 0.1); }
-  #yanxuan .inner nav {
+  .yanxuan .inner nav {
     width: 100%;
     height: 24px;
     margin-top: 6px; }
-    #yanxuan .inner nav ul {
+    .yanxuan .inner nav ul {
       color: black;
       width: 100%;
       height: 24px;
       display: flex;
       justify-content: space-between;
       font-size: 13px; }
-      #yanxuan .inner nav ul li {
+      .yanxuan .inner nav ul li {
         color: #c9c8c8;
         font-weight: normal; }
-        #yanxuan .inner nav ul li a {
+        .yanxuan .inner nav ul li a {
           color: black;
           font-weight: bolder;
           padding-bottom: 5px;
           border-bottom: 3px transparent solid; }
-        #yanxuan .inner nav ul li a:hover {
+        .yanxuan .inner nav ul li a:hover {
           color: #CC9756;
           border-bottom: 3px #CC9756 solid; }
-      #yanxuan .inner nav ul li:nth-child(1) a {
+      .yanxuan .inner nav ul li:nth-child(1) a {
         color: #CC9756;
         border-bottom: 3px #CC9756 solid; }
-  #yanxuan .jjsh1 {
-    background-color: #fff;
-    display: NONE;
-    padding: 14px 20px;
-    border: 1px solid #e5e5e5;
-    border-top: none; }
-    #yanxuan .jjsh1 ul li {
-      float: left;
-      width: 124px;
-      margin-right: 24px; }
-      #yanxuan .jjsh1 ul li .li-header {
-        height: 36px;
-        line-height: 36px;
-        border-bottom: 1px solid #e5e5e5;
-        margin-bottom: 10px;
-        font-size: 16px;
-        font-weight: bolder; }
-      #yanxuan .jjsh1 ul li .li-body {
-        font-size: 14px;
-        margin-bottom: 4px;
-        line-height: 50px; }
-        #yanxuan .jjsh1 ul li .li-body img {
-          width: 50px;
-          height: 50px;
-          margin-right: 4px; }
-      #yanxuan .jjsh1 ul li .li-body:hover {
-        color: #CC9756; }
-    #yanxuan .jjsh1 ul li:nth-last-child(1) {
-      margin-right: 0; }
+
+.jjsh {
+  position: relative; }
+
+.jjsh1 {
+  background-color: #fff;
+  display: NONE;
+  padding: 14px 20px;
+  border: 1px solid #e5e5e5;
+  border-top: none;
+  position: relative;
+  z-index: 100000; }
+  .jjsh1 ul li {
+    float: left;
+    width: 124px;
+    margin-right: 24px; }
+    .jjsh1 ul li .li-header {
+      height: 36px;
+      line-height: 36px;
+      border-bottom: 1px solid #e5e5e5;
+      margin-bottom: 10px;
+      font-size: 16px;
+      font-weight: bolder; }
+    .jjsh1 ul li .li-body {
+      font-size: 14px;
+      margin-bottom: 4px;
+      line-height: 50px; }
+      .jjsh1 ul li .li-body img {
+        width: 50px;
+        height: 50px;
+        margin-right: 4px; }
+    .jjsh1 ul li .li-body:hover {
+      color: #CC9756; }
+  .jjsh1 ul li:nth-last-child(1) {
+    margin-right: 0; }
+
+#header2 {
+  width: 1902px;
+  background-color: #fff;
+  z-index: 50;
+  height: 0px;
+  border-top: 1px #dadce0 solid;
+  border-bottom: 1px solid #ececec;
+  position: fixed;
+  top: 0px;
+  transition: all 2s; }
+  #header2 .inner {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    #header2 .inner .img {
+      width: 126px;
+      height: 60%;
+      background: url(../img/icon.png) 0 -438px no-repeat; }
+    #header2 .inner a {
+      color: black;
+      font-weight: bold;
+      display: none; }
+    #header2 .inner a:hover {
+      color: #d0a161; }
+    #header2 .inner span {
+      color: #d0a161;
+      font-size: 14px; }

@@ -18,17 +18,75 @@ var fw1=document.querySelector('#top .fw1')
     }
  }
 //搜索和导航
- var x=$("#yanxuan").width()-$('.jjsh1').width()
+ var x=1903-$('.jjsh1').width()
  $('.jjsh1').css("marginLeft",x/2)
 
  $('.jjsh').hover(function(){
      $('.jjsh1').css('display','inline-block')
-  
-        $('.jjsh1').mouseleave(function(){
-            $('.jjsh1').css('display','none')
-         })
+     
+    $('.jjsh').mouseleave(function(){
+        $('.jjsh1').css('display','none')
+})
  })
- //滚动改变顶部
+ $('.jjsh2').hover(function(){
+    $('.jjsh1').css('position','fixed')
+    $('.jjsh1').css('top','50px')
+    $('.jjsh1').css('display','inline-block')
  
+       $('.jjsh1').mouseleave(function(){
+           $('.jjsh1').css('display','none')
+           $('.jjsh1').css('position','static')
+            $('.jjsh1').css('top','0px')
+        })
+})
+ //滚动改变顶部
+ //滚动固定
+window.onscroll=function(){
+    var oDiv = document.getElementById("fix-flag"),
+        oDiv1= document.querySelector('nav'),
+        H = 0,H1=0,
+        Y = oDiv,
+        Y1=oDiv1;
+        console.log(oDiv);        
+        console.log(oDiv1);        
+    while (Y) {
+        H += Y.offsetTop; 
+        Y = Y.offsetParent;
+    }
+    while (Y1) {
+        H1 += Y1.offsetTop; 
+        Y1 = Y1.offsetParent;
+    }
+    window.onscroll = function()
+    {
+        var s = document.body.scrollTop || document.documentElement.scrollTop
+        if((s)>H) {
+            // 两侧固定
+            $('.hot').css('position','fixed')
+            $('.hot').css('top','75px')
+
+            $('.erweima').css('position','fixed')
+            $('.erweima').css('top','75px')
+        } else {
+          $('.hot').css('position','absolute')
+          $('.erweima').css('position','absolute')
+          $('.erweima').css('top','25px')
+          $('.hot').css('top','25px')
+        }
+        if(s>=H1){
+           //顶部改变
+            $('.yanxuan nav').css('height','0')
+            $('#header2').css('height','50px')
+            $('#header2 a').css('display','block')
+        }else{
+            //顶部
+          $('.yanxuan nav').css('height','24')
+        $('#header2').css('height','0px')
+        $('#header2 a').css('display','none')
+        }
+    }
+}
+
+
 
  

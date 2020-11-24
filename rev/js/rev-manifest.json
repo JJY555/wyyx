@@ -1,11 +1,12 @@
 {
   "footer.js": "footer-a6c7323745.js",
-  "goods-list.js": "goods-list-c2f1964401.js",
-  "goods.js": "goods-7a33a29bad.js",
-  "header.js": "header-5eb0c01860.js",
+  "goods-list.js": "goods-list-4957800fcb.js",
+  "goods.js": "goods-01e3cb80d2.js",
+  "header.js": "header-c091be7bfa.js",
   "index.js": "index-36617c1f53.js",
   "jquery-2.1.4.min.js": "jquery-2.1-2ed5884711.4.min.js",
   "login.js": "login-2b9536b7cb.js",
   "shooping-car.js": "shooping-car-2b9536b7cb.js",
-  "swiper.min.js": "swiper-e795db84c9.min.js"
+  "swiper.min.js": "swiper-e795db84c9.min.js",
+  "utils.js": "utils-fc1d337d12.js"
 }
