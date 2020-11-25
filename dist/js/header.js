@@ -37,7 +37,7 @@ $('.jjsh2').hover(function () {
   $('.jjsh1').css('display', 'inline-block');
   $('.jjsh1').mouseleave(function () {
     $('.jjsh1').css('display', 'none');
-    $('.jjsh1').css('position', 'static');
+    $('.jjsh1').css('position', 'relative');
     $('.jjsh1').css('top', '0px');
   });
 }); //滚动改变顶部
@@ -83,7 +83,7 @@ window.onscroll = function () {
       //顶部改变
       $('.yanxuan nav').css('height', '0');
       $('#header2').css('height', '50px');
-      $('#header2 a').css('display', 'block');
+      $('#header2 a').css('display', 'inline-block');
     } else {
       //顶部
       $('.yanxuan nav').css('height', '24');

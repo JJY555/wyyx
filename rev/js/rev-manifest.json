@@ -1,12 +1,12 @@
 {
   "footer.js": "footer-a6c7323745.js",
   "goods-list.js": "goods-list-4957800fcb.js",
-  "goods.js": "goods-01e3cb80d2.js",
-  "header.js": "header-c091be7bfa.js",
+  "goods.js": "goods-a26ab8b850.js",
+  "header.js": "header-7b0fa989e1.js",
   "index.js": "index-36617c1f53.js",
   "jquery-2.1.4.min.js": "jquery-2.1-2ed5884711.4.min.js",
   "login.js": "login-2b9536b7cb.js",
-  "shooping-car.js": "shooping-car-2b9536b7cb.js",
+  "shopping-car.js": "shopping-car-7bdfc47e42.js",
   "swiper.min.js": "swiper-e795db84c9.min.js",
   "utils.js": "utils-fc1d337d12.js"
 }

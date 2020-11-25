@@ -107,6 +107,12 @@ $('.jiarugwc').click(function () {
   var num1 = parseInt($('.gwc-num').html());
   $('.gwc-num').html(gouwu_num + num1);
   $('#goods1-num .num').html('0');
+}); //点击下面轮播里的小购物车
+
+$('.cnxh .icon-gouwuche').click(function () {
+  console.log(1);
+  var num1 = parseInt($('.gwc-num').html());
+  $('.gwc-num').html(1 + num1);
 }); //猜你喜欢的轮播
 
 var mySwiper = new Swiper('.swiper-container', {

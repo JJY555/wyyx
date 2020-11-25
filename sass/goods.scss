@@ -1,6 +1,6 @@
 @import 'reset.scss';
 #main{
-  height: 3000px;
+  // height: 3000px;
   .inner{
     height: 100%;
     h3,h4{
@@ -263,36 +263,40 @@
     .swiper-container {
       
       .box:hover{
-          background-color: #f4f0ea;
+          
           .imgbox{
-              img:last-child{
-                  top: 0;
-                  left: 0;
-              } 
+              
+              img{
+                transform: scale(1.1);
+              }
+              
           }
       }
       .box:last-child{
-          margin: 0;
+          margin: 30px 0 0 0;
+      }
+      .box:nth-child(1){
+        margin-left: 50px;
       }
       .box{
           float: left;
           width: 210px;
+          margin-top: 30px;
           margin-right: 30px;
-          .imgbox:nth-child(1){
-            margin-left: 50px;
-          }
+          
           .imgbox{
               background-color: #f4f4f4;
               width: 210px;
               height: 210px;
               position: relative;
               overflow: hidden;
-              margin-top: 30px;
               img:last-child{
                   position: absolute;
                   top: 1000px;
               }img{
-                width: 210px;
+                width: 206px;
+                transition: all 1s linear;
+                border: black 2px solid;
               }
           }
           p{
@@ -305,6 +309,10 @@
               color: red;
               text-align: center;
               margin-top: 9px;
+              span{
+                color: #b4a078;
+                cursor: pointer;
+              }
           }
       }
   } 
@@ -312,3 +320,4 @@
     }
   }
 }
+

@@ -35,7 +35,7 @@ var fw1=document.querySelector('#top .fw1')
  
        $('.jjsh1').mouseleave(function(){
            $('.jjsh1').css('display','none')
-           $('.jjsh1').css('position','static')
+           $('.jjsh1').css('position','relative')
             $('.jjsh1').css('top','0px')
         })
 })
@@ -77,7 +77,7 @@ window.onscroll=function(){
            //顶部改变
             $('.yanxuan nav').css('height','0')
             $('#header2').css('height','50px')
-            $('#header2 a').css('display','block')
+            $('#header2 a').css('display','inline-block')
         }else{
             //顶部
           $('.yanxuan nav').css('height','24')
