@@ -1,3 +1,43 @@
+//页面开始时获取数据
+$(function (){
+  $.ajax({
+    url:'../data/goods.json',
+    type:'get',
+    dataType:'json',
+    success:function(json){
+      var goodsStr = `<h2>口碑好物</h2>
+      <h3>品质爆款</h3>`
+      $.each(json,function (index,item) {
+        goodsStr +=`
+            <a href="./goods.html" class="shangpin" code="${item.code}">
+              <div class="imgbox">
+                <img src="${item.imgurl2}" alt="" class="img2">
+                <img src="${item.imgurl}" alt="">
+              </div>
+              <div class="miaoshu">
+                <p class="ms">${item.title}</p>
+                <p class="price">${item.price}</p>
+              </div>
+              <p class="kuanshi">${item.kuanshi}</p>
+            </a>
+        `
+      })  
+      $('.main-center>.down').html(goodsStr)
+      
+    }
+  })
+
+}) 
+//用事件委托写localstrange
+  $('#main').on('click','.shangpin',function () {
+    var code =$(this).attr('code')
+    var goodsArr=[];
+        goodsArr.push({code:code})
+    localStorage.setItem('code',JSON.stringify(goodsArr))
+  })
+  
+
+
 var mySwiper = new Swiper ('.swiper-container', {
   loop: true, // 循环模式选项
   

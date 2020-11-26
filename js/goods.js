@@ -1,3 +1,71 @@
+//页面开始时获取数据
+
+  $(function (){
+    $.ajax({
+      url:'../data/goods.json',
+      type:'get',
+      dataType:'json',
+      success:function(json){
+        var goodsArr= JSON.parse(localStorage.getItem('code'))
+  
+        var leftStr = ''
+        var rightStr =''
+        $.each(json,function (index,obj){
+          if ( goodsArr[0].code === obj.code ){
+            leftStr += `
+              <div class="minBox">
+                <img src="${obj.tu1}" alt="">
+                <div class="mask"></div>
+              </div>
+              <div class="maxBox">
+                <img src="${obj.tu1}" alt="">
+              </div>
+              <div class="goodsimg">
+                <img src="${obj.tu1}" alt=""><img src="${obj.tu2}" alt=""><img src="${obj.tu3}" alt=""><img src="${obj.tu4}" alt=""><img src="${obj.tu5}" alt="">
+              </div>
+            
+            `
+            rightStr +=`
+          <div class="right">
+            <h3>新品</h3>
+            <h4>${obj.title}</h4>
+            <h4>100%</h4>
+            <h5>临安特产，酥脆醇香</h5>
+            <h5>好评率></h5>
+            <div class="neibujia">
+              <span>好货内部价</span>
+              <span class="yh-time">距优惠结束 01:44:09</span>
+              <div class="mai">
+                <h6>活动价</h6><h4>${obj.price}</h4>
+                <img src="./img/ttmy.png" alt="">
+                <h6>促销</h6> <h5>低质3折超值换购</h5>
+                <h6>促销</h6> <h5>低质3折超值换购</h5>
+                <h6>促销</h6> <h5>低质3折超值换购</h5>
+                <h6>促销</h6> <h5>低质3折超值换购</h5>
+                <h6>促销</h6> <h5>低质3折超值换购</h5>
+                <h6>服务</h6> <h5 class="last">·网易自营品牌·不支持无忧退换·不可用券·国内部分地区不可配送</h5>
+                
+              </div> 
+              <div id="goods1-num">
+                <h6> 数量</h6><span class="jian">一</span><span class="num">1</span><span class="jia">+</span>
+                <h6>规格</h6> <span>150克</span>
+              </div>
+              <a href="./shopping-car.html" class="goumai" >立即购买</a> <a href="#  " class="jiarugwc" code="${obj.code}"><span class="iconfont icon-gouwuche"></span> 加入购物车 </a>
+              </div>
+            </div>
+            `
+            $('#fdj-box>.left').html(leftStr)
+            $('#fdj-box>.right').html(rightStr)
+            return false;
+          }
+        })
+        fn2()
+      }
+    })
+  })
+
+ 
+function fn2(){
 //放大镜
 var minBox = document.querySelector('.minBox')
 var mask = document.querySelector('.mask')
@@ -94,7 +162,6 @@ $('#goods1-num .jian').click(function(){
 $('#goods1-num .jia').click(function(){
   var num =parseInt($('#goods1-num .num').html())
   console.log(num);
-  
     num++
     $('#goods1-num .num').html(num)
   
@@ -105,14 +172,14 @@ $('.jiarugwc').click(function(){
   gouwu_num =parseInt($('#goods1-num .num').html())
   var num1=parseInt($('.gwc-num').html()) 
   $('.gwc-num').html(gouwu_num+num1)
-  $('#goods1-num .num').html('0')
+  
 })
 //点击下面轮播里的小购物车
-$('.cnxh .icon-gouwuche').click(function(){
-  console.log(1);
-  var num1=parseInt($('.gwc-num').html()) 
-  $('.gwc-num').html(1+num1)
-})
+// $('.cnxh .icon-gouwuche').click(function(){
+//   console.log(1);
+//   var num1=parseInt($('.gwc-num').html()) 
+//   $('.gwc-num').html(1+num1)
+// })
 //猜你喜欢的轮播
 var mySwiper = new Swiper ('.swiper-container', {
   loop: true, // 循环模式选项
@@ -130,3 +197,47 @@ var mySwiper = new Swiper ('.swiper-container', {
   
 
 })        
+  // 点击加入购物车
+  $('.jiarugwc').click(function(e){
+    var code = $(this).attr('code')
+    //判断是否有数据在里面,有的话取出来
+    console.log("触发一次");
+    
+    e.stopPropagation();//阻止冒泡
+    if(localStorage.getItem('goods')){
+       
+      var goodsArr= JSON.parse(localStorage.getItem('goods')) 
+      var flag=false;
+      //判断当前商品是否在其中，在的话加一
+      $.each(goodsArr,function(index,item){
+        if(item.code === code){
+          var num =parseInt($('#goods1-num .num').html())  
+          item.num+=num
+          flag=true;
+          console.log('zhixing1');
+          
+          return false
+          
+        }
+      })
+      //有数据 但该code还没有
+      if(!flag){
+        
+          console.log(code);
+          var num =parseInt($('#goods1-num .num').html())  
+          goodsArr.push({code:code,num:num})
+        
+      }
+    }else{
+      console.log('zhixing3');
+      var goodsArr=[];
+      var num =parseInt($('#goods1-num .num').html())
+      goodsArr.push({code:code,num:num})
+      console.log(1111);
+      
+    }
+    
+    //更改cookie
+    localStorage.setItem('goods',JSON.stringify(goodsArr))
+  })
+}

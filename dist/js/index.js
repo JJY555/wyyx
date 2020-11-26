@@ -59,4 +59,4 @@ var mySwiper1 = new Swiper('.swiper-container', {
 });
 $(".swiper-pagination-bullet").hover(function () {
   $(this).click(); //鼠标划上去之后，自动触发点击事件来模仿鼠标划上去的事件
-}); //滚动固定
+});

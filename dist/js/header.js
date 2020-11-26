@@ -25,12 +25,28 @@ fw.onmouseenter = function () {
 
 var x = 1903 - $('.jjsh1').width();
 $('.jjsh1').css("marginLeft", x / 2);
+$('.top').hover(function () {
+  $('.jjsh1').css('display', 'none');
+});
+$('.jjsh').next().hover(function () {
+  $('.jjsh1').css('display', 'none');
+});
+$('.jjsh').prev().hover(function () {
+  $('.jjsh1').css('display', 'none');
+});
+$('.jjsh2').next().hover(function () {
+  $('.jjsh1').css('display', 'none');
+});
+$('.jjsh2').prev().hover(function () {
+  $('.jjsh1').css('display', 'none');
+});
 $('.jjsh').hover(function () {
   $('.jjsh1').css('display', 'inline-block');
-  $('.jjsh').mouseleave(function () {
+  $('.jjsh1').mouseleave(function () {
     $('.jjsh1').css('display', 'none');
   });
 });
+$();
 $('.jjsh2').hover(function () {
   $('.jjsh1').css('position', 'fixed');
   $('.jjsh1').css('top', '50px');
@@ -92,3 +108,18 @@ window.onscroll = function () {
     }
   };
 };
+
+$('.login-div span').click(function () {
+  $('.login-div').css('display', 'none');
+  $('.login-divmask').css('display', 'none');
+});
+$('#login').click(function () {
+  $('.login-div').css('display', 'block');
+  $('.login-divmask').css('display', 'block');
+
+  if (getCookie('username')) {
+    user.value = getCookie('username');
+    pass.value = getCookie('password');
+    auto.checked = true;
+  }
+});
